@@ -1,0 +1,36 @@
+# pat
+bayamp
+
+package TestNG;
+
+@org.testng.annotations.Test
+public class Employee 
+{
+	String name;
+	int id;
+	String location;
+	
+	Employee(String name)
+	{
+		this.name = name;
+		location = "Bay area";
+	}
+	
+	Employee(String name, int id)
+	{
+		this.name = name;
+		this.id = id;
+	}
+	
+	Employee(String name,String location)
+	{
+		this.name = name;
+		this.location = location;
+	}
+	
+	public String info()
+	{
+		return "name: " + name +"\nid: " + id +"\nlocation: " + location;
+	}
+
+}
