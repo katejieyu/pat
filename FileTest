@@ -1,0 +1,56 @@
+# pat
+bayamp
+
+
+package fileTest;
+
+import java.io.*;
+
+public class FileTest {
+
+	public static void main(String[] args) throws IOException
+	{
+		try
+		{
+			FileReader fr = new FileReader("/Users/jieyu16/Desktop/bayamp/trainning/java/EclipseMavenWS/fileTest/src/fileTest/myFile");
+			char[] a = new char[1];
+			int count = 0;
+			
+			
+			while (fr.read(a) != -1)
+			{
+				count++;
+			}
+			fr.close();
+			System.out.println("There is " + count + " characters!");
+			
+			
+		}
+			catch(FileNotFoundException e)
+			{
+				System.out.println(e.getMessage());
+			}
+		
+	
+		
+		
+		
+
+	}
+	
+	/*static int times = 0;
+	static int index =0;
+	
+	static int getAppearTimes(FileReader fr, String str)
+	{
+		index = fr.indexOf(str);
+		
+		if(index != -1 && <= fr.length() - str.length())
+		{
+			times++;
+			getAppearTimes(fr.substring(index + str.length()), str);
+		}
+		return times;
+	}*/
+
+}
