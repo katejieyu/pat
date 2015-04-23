@@ -1,0 +1,34 @@
+# pat
+bayamp
+
+package TestNG;
+
+
+@org.testng.annotations.Test
+public class Student extends Employee
+{
+	String school;
+	
+	Student(String name, String school) 
+	{
+		super(name);
+		this.school = school;
+		location = "Bay area";
+		
+	
+	}
+	
+	Student(String n,String l,String school)
+	{
+		super(n,l);
+		this.school = school;
+	}
+	
+	public String info()
+	{
+		return super.info() + "\nschool: " + school +"\n" ;
+	}
+	
+	
+
+}
