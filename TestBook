@@ -1,0 +1,53 @@
+# pat
+bayamp
+
+package TestNG;
+
+
+
+public class Book
+{
+	public String author;
+	public String publisher;
+	public int pages;
+	public String title;
+	public String publishedYear;
+	
+	@org.testng.annotations.Test
+	public Book(String a, String p, int ag, String t, String py)
+	{
+		this.author = a;
+		this.publisher = p;
+		this.pages = ag;
+		this.title = t;
+		this.publishedYear = py;
+	}
+	
+	
+	public void info()
+	{
+		System.out.println("The book's author is " + author + "\n publisher is " + publisher + "\n pages are " + pages + "\n title is " + title + "\n published year is " + publishedYear); 
+	}
+
+
+}
+
+
+package TestNG;
+
+import TestNG.Book;
+
+public class Testbook 
+{
+	@org.testng.annotations.Test
+	public void getBook()
+	{
+		Book b1 = new Book("M","N",13,"U","2001");
+		Book b2 = new Book("w","e",80,"y","2002");
+		
+		b1.info();
+		b2.info();
+	}
+
+}
+
