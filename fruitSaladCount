@@ -1,0 +1,391 @@
+import java.util.*;
+
+
+public class Foothill_1
+
+{
+   public static void main(String[] args)
+   {
+      //the first fruit
+      double [] mangos = new double[9];
+      String Mangos = "Mangos";
+      mangos[0] = 60; //calories per 100 grams
+      mangos[1] = 0.4;//fat
+      mangos[2] = 0;// cholesterol
+      mangos[3] = 1;// sodium
+      mangos[4] = 15.6;//carbs
+      mangos[5] = 0.8;//protein
+      mangos[6] = 10;// calcium
+      mangos[7] = 168; //potassium
+      mangos[8] = 1.5;//soluble fiber
+
+      //the second fruit
+      double [] bananas = new double[9];
+      String Bananas = "Bananas";
+      bananas[0] = 89; //calories per 100 grams
+      bananas[1] = 0.3;//fat
+      bananas[2] = 0;// cholesterol
+      bananas[3] = 1;// sodium
+      bananas[4] = 22.8;//carbs
+      bananas[5] = 1.1;//protein
+      bananas[6] = 5;// calcium
+      bananas[7] = 358; //potassium
+      bananas[8] = 1.2;//soluble fiber
+
+      //the third fruit
+      double [] blackberries = new double[9];
+      String Blackberries = "Blackberries";
+      blackberries[0] = 43; //calories per 100 grams
+      blackberries[1] = 0.5;//fat
+      blackberries[2] = 0;// cholesterol
+      blackberries[3] = 1;// sodium
+      blackberries[4] = 10.2;//carbs
+      blackberries[5] = 1.4;//protein
+      blackberries[6] = 29;// calcium
+      blackberries[7] = 162; //potassium
+      blackberries[8] = 14.52;//soluble fiber
+
+      //the forth fruit
+      double [] apples = new double[9];
+      String Apples = "Apples";
+      apples[0] = 52; //calories per 100 grams
+      apples[1] = 0.2;//fat
+      apples[2] = 0;// cholesterol
+      apples[3] = 1;// sodium
+      apples[4] = 13.8;//carbs
+      apples[5] = 0.3;//protein
+      apples[6]= 6;// calcium
+      apples[7]= 107; //potassium
+      apples[8] = 1.2;//soluble fiber
+
+      //the fifth fruit
+      double [] blueberries = new double[9];
+      String Blueberries = "Blueberries";
+      blueberries[0] = 57; //calories per 100 grams
+      blueberries[1] = 0.3;//fat
+      blueberries[2] = 0;// cholesterol
+      blueberries[3] = 1;// sodium
+      blueberries[4] = 14.5;//carbs
+      blueberries[5] = 0.7;//protein
+      blueberries[6]= 6;// calcium
+      blueberries[7] = 77; //potassium
+      blueberries[8] = 0.4;//soluble fiber
+
+      //the sixth fruit
+      double [] pineapples = new double[9];
+      String Pineapples = "Pineapples";
+      pineapples[0] = 50; //calories per 100 grams
+      pineapples[1] = 0.1;//fat
+      pineapples[2] = 0;// cholesterol
+      pineapples[3] = 1;// sodium
+      pineapples[4] = 13.1;//carbs
+      pineapples[5] = 0.5;//protein
+      pineapples[6] = 13;// calcium
+      pineapples[7] = 109; //potassium
+      pineapples[8] = 1.4;//soluble fiber
+
+      //the seventh fruit
+      double [] watermelon = new double[9];
+      String Watermelon = "Watermelon";
+      watermelon[0] = 30; //calories per 100 grams
+      watermelon[0] = 0.2;//fat
+      watermelon[0] = 0;// cholesterol
+      watermelon[0] = 1;// sodium
+      watermelon[0] = 7.6;//carbs
+      watermelon[0] = 0.6;//protein
+      watermelon[0] = 7;// calcium
+      watermelon[0] = 112; //potassium
+      watermelon[0] = 0.3;//soluble fiber
+
+      String recipeName, userInputStr,servingSizeStr;
+      int userInputInt,servingSizeInt;
+      double totalCals,totalFat,totalChol,totalSod,totalCarbs,totalPro,totalCalc,
+      totalPota,totalSolF;
+
+
+
+      //welcome words
+      System.out.println("--------- Welcome to Fruit Salad World ! ----------"
+            + "\n\n     Do you want to have some salad today?"
+            + "\n     We have seven fruit for you to choose!");
+      System.out.println("\n---------- List of Possible Ingredients ---------");
+      System.out.println("\n\n       *  Fruit #1: Mangos" + 
+            "\n       *  Fruit #2: "
+            + "Bananas" + "\n       *  Fruit #3: Blackberries" + "\n       *  "
+            + "Fruit #4: Apples" + "\n       *  Fruit #5: Blueberries" + 
+            "\n       *  Fruit #6: Pineapples" + "\n       * "
+            + " Fruit #7: Watermelon");
+
+      totalCals = 0;
+      totalFat = 0;
+      totalChol = 0;
+      totalSod = 0;
+      totalCarbs = 0;
+      totalPro = 0;
+      totalCalc = 0;
+      totalPota = 0;
+      totalSolF = 0;
+
+      System.out.println("\nWhat are you calling this recipe ?");
+      Scanner inputStream = new Scanner(System.in);
+      recipeName = inputStream.nextLine();
+
+      try{
+         // fruit #1
+         System.out.println("\nHow many grams of " + Mangos + " ?");
+         userInputStr = inputStream.nextLine();
+         userInputInt = Integer.parseInt(userInputStr);
+
+         if(userInputInt < 0 || userInputInt > 1000)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 1000 !");
+            return;
+         }
+         else
+         {
+            totalCals += userInputInt * (mangos[0] / 100);
+            totalFat += userInputInt * (mangos[1] / 100);
+            totalChol += userInputInt * (mangos[2] / 100);
+            totalSod += userInputInt * (mangos[3] / 100);
+            totalCarbs += userInputInt * (mangos[4] / 100);
+            totalPro += userInputInt * (mangos[5] / 100);
+            totalCalc += userInputInt * (mangos[6]/ 100);
+            totalPota += userInputInt * (mangos[7] / 100);
+            totalSolF += userInputInt * (mangos[8] / 100);
+         }
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+
+
+
+      try{
+         // fruit #2
+         System.out.println("\nHow may grams of " + Bananas + " ?");
+         userInputStr = inputStream.nextLine();
+         userInputInt = Integer.parseInt(userInputStr);
+
+         if(userInputInt < 0 || userInputInt > 1000)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 1000 !");
+            return;
+         }
+         else
+         {
+            totalCals += userInputInt * (bananas[0] / 100);
+            totalFat += userInputInt * (bananas[1] / 100);
+            totalChol += userInputInt * (bananas[2] / 100);
+            totalSod += userInputInt * (bananas[3] / 100);
+            totalCarbs += userInputInt * (bananas[4] / 100);
+            totalPro += userInputInt * (bananas[5] / 100);
+            totalCalc += userInputInt * (bananas[6] / 100);
+            totalPota += userInputInt * (bananas[7] / 100);
+            totalSolF += userInputInt * (bananas[8] / 100);
+         }
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+
+      try{
+         //fruit#3
+         System.out.println("\nHow may grams of " + Blackberries + " ?");
+         userInputStr = inputStream.nextLine();
+         userInputInt = Integer.parseInt(userInputStr);
+         if(userInputInt < 0 || userInputInt > 1000)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 1000 !");
+            return;
+         }
+         else
+         {
+            totalCals += userInputInt * (blackberries[0] / 100);
+            totalFat += userInputInt * (blackberries[1] / 100);
+            totalChol += userInputInt * (blackberries[2] / 100);
+            totalSod += userInputInt * (blackberries[3] / 100);
+            totalCarbs += userInputInt * (blackberries[4] / 100);
+            totalPro += userInputInt * (blackberries[5] / 100);
+            totalCalc += userInputInt * (blackberries[6] / 100);
+            totalPota += userInputInt * (blackberries[7] / 100);
+            totalSolF += userInputInt * (blackberries[8] / 100);
+         }
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+
+      try{
+         //fruit#4
+         System.out.println("\nHow may grams of " + Apples + " ?");
+         userInputStr = inputStream.nextLine();
+         userInputInt = Integer.parseInt(userInputStr);
+         if(userInputInt < 0 || userInputInt > 1000)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 1000 !");
+            return;
+         }
+         else
+         {
+            totalCals += userInputInt * (apples[0] / 100);
+            totalFat += userInputInt * (apples[0] / 100);
+            totalChol += userInputInt * (apples[0] / 100);
+            totalSod += userInputInt * (apples[0] / 100);
+            totalCarbs += userInputInt * (apples[0] / 100);
+            totalPro += userInputInt * (apples[0] / 100);
+            totalCalc += userInputInt * (apples[0] / 100);
+            totalPota += userInputInt * (apples[0] / 100);
+            totalSolF += userInputInt * (apples[0] / 100);
+         } 
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+
+      try{
+         //fruit#5
+         System.out.println("\nHow may grams of " + Blueberries + " ?");
+         userInputStr = inputStream.nextLine();
+         userInputInt = Integer.parseInt(userInputStr);
+         if(userInputInt < 0 || userInputInt > 1000)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 1000 !");
+            return;
+         }
+         else
+         {
+            totalCals += userInputInt * (blueberries[0] / 100);
+            totalFat += userInputInt * (blueberries[1] / 100);
+            totalChol += userInputInt * (blueberries[2] / 100);
+            totalSod += userInputInt * (blueberries[3] / 100);
+            totalCarbs += userInputInt * (blueberries[4] / 100);
+            totalPro += userInputInt * (blueberries[5] / 100);
+            totalCalc += userInputInt * (blueberries[6] / 100);
+            totalPota += userInputInt * (blueberries[7] / 100);
+            totalSolF += userInputInt * (blueberries[8] / 100);
+         }
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+
+      try{
+         //fruit#6
+         System.out.println("\nHow may grams of " + Pineapples + " ?");
+         userInputStr = inputStream.nextLine();
+         userInputInt = Integer.parseInt(userInputStr);
+         if(userInputInt < 0 || userInputInt > 1000)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 1000 !");
+            return;
+         }
+         else
+         {
+            totalCals += userInputInt * (pineapples[0] / 100);
+            totalFat += userInputInt * (pineapples[1] / 100);
+            totalChol += userInputInt * (pineapples[2] / 100);
+            totalSod += userInputInt * (pineapples[3] / 100);
+            totalCarbs += userInputInt * (pineapples[4] / 100);
+            totalPro += userInputInt * (pineapples[5] / 100);
+            totalCalc += userInputInt * (pineapples[6] / 100);
+            totalPota += userInputInt * (pineapples[7] / 100);
+            totalSolF += userInputInt * (pineapples[8] / 100);
+         }
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+
+      try{
+         //fruit#7
+         System.out.println("\nHow may grams of " + Watermelon + " ?");
+         userInputStr = inputStream.nextLine();
+         userInputInt = Integer.parseInt(userInputStr);
+         if(userInputInt < 0 || userInputInt > 1000)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 1000 !");
+            return;
+
+         }
+         else
+         {
+            totalCals += userInputInt * (watermelon[0] / 100);
+            totalFat += userInputInt * (watermelon[1] / 100);
+            totalChol += userInputInt * (watermelon[2] / 100);
+            totalSod += userInputInt * (watermelon[3] / 100);
+            totalCarbs += userInputInt * (watermelon[4] / 100);
+            totalPro += userInputInt * (watermelon[5] / 100);
+            totalCalc += userInputInt * (watermelon[6] / 100);
+            totalPota += userInputInt * (watermelon[7]/ 100);
+            totalSolF += userInputInt * (watermelon[8]/ 100);
+         }
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+      try{
+         System.out.println("\nHow many people to serve ?");
+         servingSizeStr = inputStream.nextLine();
+         servingSizeInt = Integer.parseInt(servingSizeStr);
+         if(servingSizeInt < 0 || servingSizeInt > 10)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 10 !");
+            return;
+
+         }
+         else
+         {
+            totalCals = totalCals / servingSizeInt;
+            totalFat = totalFat / servingSizeInt;
+            totalChol = totalChol / servingSizeInt;
+            totalSod = totalSod / servingSizeInt;
+            totalCarbs = totalCarbs / servingSizeInt;
+            totalPro = totalPro / servingSizeInt;
+            totalCalc = totalCalc / servingSizeInt;
+            totalPota = totalPota / servingSizeInt;
+            totalSolF = totalSolF / servingSizeInt;
+         }
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+
+      inputStream .close();
+
+      // Report result
+
+      System.out.println("\n------- Nutrition for " + recipeName +" --------" );
+      System.out.println("              ( For 1 person )");
+      System.out.println("\n       *    Calories: " + totalCals + " cals");
+      System.out.println("       *    Fat: " + totalFat + " g");
+      System.out.println("       *    Calories: " + totalChol + " mg");
+      System.out.println("       *    sodium: " + totalSod + " mg");
+      System.out.println("       *    Carbohydrates: " + totalCarbs + " g");
+      System.out.println("       *    Protein: " + totalPro + " g");
+      System.out.println("       *    Calcium: " + totalCalc + " mg");
+      System.out.println("       *    potassium: " + totalPota + " mg");
+      System.out.println("       *    Soluble Fiber: " + totalSolF + " g");
+      System.out.println("\n------- Please enjoy " + recipeName +" --------" );
+
+
+   }
+
+
+
+}
