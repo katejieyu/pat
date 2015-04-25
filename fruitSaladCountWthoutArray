@@ -1,0 +1,382 @@
+import java.util.*;
+
+public class Foothill
+
+{
+   //the first fruit
+   static final String fruit_1_Name = "mangos";
+   static final double fruit_1_calories_p100g = 60; // per cup
+   static final double fruit_1_fat_p100g = 0.4;      //g
+   static final double fruit_1_cholesterol_p100g = 0; //mg
+   static final double fruit_1_sodium_p100g = 1;     //mg
+   static final double fruit_1_carbs_p100g = 15.6;     //g
+   static final double fruit_1_protein_p100g = 0.8;  //g
+   static final double fruit_1_calcium_p100g = 10; //mg
+   static final double fruit_1_potassium_p100g = 168;//mg
+   static final double fruit_1_sol_fiber_p100g = 1.5;   // in grams
+
+   //the second fruit
+   static final String fruit_2_Name = "bananas";
+   static final double fruit_2_calories_p100g = 89; // per cup
+   static final double fruit_2_fat_p100g = 0.3;      //g
+   static final double fruit_2_cholesterol_p100g = 0; //mg
+   static final double fruit_2_sodium_p100g = 1;     //mg
+   static final double fruit_2_carbs_p100g = 22.8;     //g
+   static final double fruit_2_protein_p100g = 1.1;  //g
+   static final double fruit_2_calcium_p100g = 5; //mg
+   static final double fruit_2_potassium_p100g = 358;//mg
+   static final double fruit_2_sol_fiber_p100g = 1.2;   // in grams
+
+   //the third fruit
+   static final String fruit_3_Name = "blackberries";
+   static final double fruit_3_calories_p100g = 43; // per cup
+   static final double fruit_3_fat_p100g = 0.5;      //g
+   static final double fruit_3_cholesterol_p100g = 0; //mg
+   static final double fruit_3_sodium_p100g = 1;     //mg
+   static final double fruit_3_carbs_p100g = 10.2;     //g
+   static final double fruit_3_protein_p100g = 1.4;  //g
+   static final double fruit_3_calcium_p100g = 29; //mg
+   static final double fruit_3_potassium_p100g = 162;//mg
+   static final double fruit_3_sol_fiber_p100g = 14.52;   // in grams
+
+   //the fourth fruit
+   static final String fruit_4_Name = "apples";
+   static final double fruit_4_calories_p100g = 52; // per cup
+   static final double fruit_4_fat_p100g = 0.2;      //g
+   static final double fruit_4_cholesterol_p100g = 0; //mg
+   static final double fruit_4_sodium_p100g = 1;     //mg
+   static final double fruit_4_carbs_p100g = 13.8;     //g
+   static final double fruit_4_protein_p100g = 0.3;  //g
+   static final double fruit_4_calcium_p100g = 6; //mg
+   static final double fruit_4_potassium_p100g = 107;//mg
+   static final double fruit_4_sol_fiber_p100g = 1.2;   // in grams
+
+   //the fifth fruit
+   static final String fruit_5_Name = "blueberries";
+   static final double fruit_5_calories_p100g = 57; // per cup
+   static final double fruit_5_fat_p100g = 0.3;      //g
+   static final double fruit_5_cholesterol_p100g = 0; //mg
+   static final double fruit_5_sodium_p100g = 1;     //mg
+   static final double fruit_5_carbs_p100g = 14.5;     //g
+   static final double fruit_5_protein_p100g = 0.7;  //g
+   static final double fruit_5_calcium_p100g = 6; //mg
+   static final double fruit_5_potassium_p100g = 77;//mg
+   static final double fruit_5_sol_fiber_p100g = 0.4;   // in grams
+
+   //the sixth fruit
+   static final String fruit_6_Name = "pineapples";
+   static final double fruit_6_calories_p100g = 50; // per cup
+   static final double fruit_6_fat_p100g = 0.1;      //g
+   static final double fruit_6_cholesterol_p100g = 0; //mg
+   static final double fruit_6_sodium_p100g = 1;     //mg
+   static final double fruit_6_carbs_p100g = 13.1;     //g
+   static final double fruit_6_protein_p100g = 0.5;  //g
+   static final double fruit_6_calcium_p100g = 13; //mg
+   static final double fruit_6_potassium_p100g = 109;//mg
+   static final double fruit_6_sol_fiber_p100g = 1.4;   // in grams
+
+   //the seventh fruit
+   static final String fruit_7_Name = "watermelon";
+   static final double fruit_7_calories_p100g = 30; // per cup
+   static final double fruit_7_fat_p100g = 0.2;      //g
+   static final double fruit_7_cholesterol_p100g = 0; //mg
+   static final double fruit_7_sodium_p100g = 1;     //mg
+   static final double fruit_7_carbs_p100g = 7.6;     //g
+   static final double fruit_7_protein_p100g = 0.6;  //g
+   static final double fruit_7_calcium_p100g = 7; //mg
+   static final double fruit_7_potassium_p100g = 112;//mg
+   static final double fruit_7_sol_fiber_p100g = 0.3;   // in grams
+
+
+
+
+   public static void main(String[] args) throws NumberFormatException
+   {
+      String recipeName, userInputStr,servingSizeStr;
+      int userInputInt,servingSizeInt;
+      double totalCals,totalFat,totalChol,totalSod,totalCarbs,totalPro,totalCalc,
+      totalPota,totalSolF;
+
+
+
+      //welcome words
+      System.out.println("--------- Welcome to Fruit Salad World ! ----------"
+            + "\n\n     Do you want to have some salad today?"
+            + "\n     We have seven fruit for you to choose!");
+      System.out.println("\n---------- List of Possible Ingredients ---------");
+      System.out.println("\n\n    *  Fruit #1: mangos" + "\n    *  Fruit #2: "
+            + "bananas" + "\n    *  Fruit #3: blackberries" + "\n    *  "
+            + "Fruit #4: apples" + "\n    *  Fruit #5: blueberries" + 
+            "\n    *  Fruit #6: pineapples" + "\n    *  Fruit #7: watermelon");
+
+      totalCals = 0;
+      totalFat = 0;
+      totalChol = 0;
+      totalSod = 0;
+      totalCarbs = 0;
+      totalPro = 0;
+      totalCalc = 0;
+      totalPota = 0;
+      totalSolF = 0;
+
+      System.out.println("\nWhat are you calling this recipe ?");
+      Scanner inputStream = new Scanner(System.in);
+      recipeName = inputStream.nextLine();
+
+      try{
+         // fruit #1
+         System.out.println("\nHow many grams of " + fruit_1_Name + " ?");
+         userInputStr = inputStream.nextLine();
+         userInputInt = Integer.parseInt(userInputStr);
+
+         if(userInputInt < 0 || userInputInt > 1000)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 1000 !");
+            return;
+         }
+         else
+         {
+            totalCals += userInputInt * (fruit_1_calories_p100g / 100);
+            totalFat += userInputInt * (fruit_1_fat_p100g / 100);
+            totalChol += userInputInt * (fruit_1_cholesterol_p100g / 100);
+            totalSod += userInputInt * (fruit_1_sodium_p100g / 100);
+            totalCarbs += userInputInt * (fruit_1_carbs_p100g / 100);
+            totalPro += userInputInt * (fruit_1_protein_p100g / 100);
+            totalCalc += userInputInt * (fruit_1_calcium_p100g / 100);
+            totalPota += userInputInt * (fruit_1_potassium_p100g / 100);
+            totalSolF += userInputInt * (fruit_1_sol_fiber_p100g / 100);
+         }
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+
+      try{
+         // fruit #2
+         System.out.println("\nHow may grams of " + fruit_2_Name + " ?");
+         userInputStr = inputStream.nextLine();
+         userInputInt = Integer.parseInt(userInputStr);
+
+         if(userInputInt < 0 || userInputInt > 1000)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 1000 !");
+            return;
+         }
+         else
+         {
+            totalCals += userInputInt * (fruit_2_calories_p100g / 100);
+            totalFat += userInputInt * (fruit_2_fat_p100g / 100);
+            totalChol += userInputInt * (fruit_2_cholesterol_p100g / 100);
+            totalSod += userInputInt * (fruit_2_sodium_p100g / 100);
+            totalCarbs += userInputInt * (fruit_2_carbs_p100g / 100);
+            totalPro += userInputInt * (fruit_2_protein_p100g / 100);
+            totalCalc += userInputInt * (fruit_2_calcium_p100g / 100);
+            totalPota += userInputInt * (fruit_2_potassium_p100g / 100);
+            totalSolF += userInputInt * (fruit_2_sol_fiber_p100g / 100);
+         }
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+
+      try{
+         //fruit#3
+         System.out.println("\nHow may grams of " + fruit_3_Name + " ?");
+         userInputStr = inputStream.nextLine();
+         userInputInt = Integer.parseInt(userInputStr);
+         if(userInputInt < 0 || userInputInt > 1000)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 1000 !");
+            return;
+         }
+         else
+         {
+            totalCals += userInputInt * (fruit_3_calories_p100g / 100);
+            totalFat += userInputInt * (fruit_3_fat_p100g / 100);
+            totalChol += userInputInt * (fruit_3_cholesterol_p100g / 100);
+            totalSod += userInputInt * (fruit_3_sodium_p100g / 100);
+            totalCarbs += userInputInt * (fruit_3_carbs_p100g / 100);
+            totalPro += userInputInt * (fruit_3_protein_p100g / 100);
+            totalCalc += userInputInt * (fruit_3_calcium_p100g / 100);
+            totalPota += userInputInt * (fruit_3_potassium_p100g / 100);
+            totalSolF += userInputInt * (fruit_3_sol_fiber_p100g / 100);
+         }
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+
+      try{
+         //fruit#4
+         System.out.println("\nHow may grams of " + fruit_4_Name + " ?");
+         userInputStr = inputStream.nextLine();
+         userInputInt = Integer.parseInt(userInputStr);
+         if(userInputInt < 0 || userInputInt > 1000)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 1000 !");
+            return;
+         }
+         else
+         {
+            totalCals += userInputInt * (fruit_4_calories_p100g / 100);
+            totalFat += userInputInt * (fruit_4_fat_p100g / 100);
+            totalChol += userInputInt * (fruit_4_cholesterol_p100g / 100);
+            totalSod += userInputInt * (fruit_4_sodium_p100g / 100);
+            totalCarbs += userInputInt * (fruit_4_carbs_p100g / 100);
+            totalPro += userInputInt * (fruit_4_protein_p100g / 100);
+            totalCalc += userInputInt * (fruit_4_calcium_p100g / 100);
+            totalPota += userInputInt * (fruit_4_potassium_p100g / 100);
+            totalSolF += userInputInt * (fruit_4_sol_fiber_p100g / 100);
+         } 
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+
+      try{
+         //fruit#5
+         System.out.println("\nHow may grams of " + fruit_5_Name + " ?");
+         userInputStr = inputStream.nextLine();
+         userInputInt = Integer.parseInt(userInputStr);
+         if(userInputInt < 0 || userInputInt > 1000)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 1000 !");
+            return;
+         }
+         else
+         {
+            totalCals += userInputInt * (fruit_5_calories_p100g / 100);
+            totalFat += userInputInt * (fruit_5_fat_p100g / 100);
+            totalChol += userInputInt * (fruit_5_cholesterol_p100g / 100);
+            totalSod += userInputInt * (fruit_5_sodium_p100g / 100);
+            totalCarbs += userInputInt * (fruit_5_carbs_p100g / 100);
+            totalPro += userInputInt * (fruit_5_protein_p100g / 100);
+            totalCalc += userInputInt * (fruit_5_calcium_p100g / 100);
+            totalPota += userInputInt * (fruit_5_potassium_p100g / 100);
+            totalSolF += userInputInt * (fruit_5_sol_fiber_p100g / 100);
+         }
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+
+      try{
+         //fruit#6
+         System.out.println("\nHow may grams of " + fruit_6_Name + " ?");
+         userInputStr = inputStream.nextLine();
+         userInputInt = Integer.parseInt(userInputStr);
+         if(userInputInt < 0 || userInputInt > 1000)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 1000 !");
+            return;
+         }
+         else
+         {
+            totalCals += userInputInt * (fruit_6_calories_p100g / 100);
+            totalFat += userInputInt * (fruit_6_fat_p100g / 100);
+            totalChol += userInputInt * (fruit_6_cholesterol_p100g / 100);
+            totalSod += userInputInt * (fruit_6_sodium_p100g / 100);
+            totalCarbs += userInputInt * (fruit_6_carbs_p100g / 100);
+            totalPro += userInputInt * (fruit_6_protein_p100g / 100);
+            totalCalc += userInputInt * (fruit_6_calcium_p100g / 100);
+            totalPota += userInputInt * (fruit_6_potassium_p100g / 100);
+            totalSolF += userInputInt * (fruit_6_sol_fiber_p100g / 100);
+         }
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+
+      try{
+         //fruit#7
+         System.out.println("\nHow may grams of " + fruit_7_Name + " ?");
+         userInputStr = inputStream.nextLine();
+         userInputInt = Integer.parseInt(userInputStr);
+         if(userInputInt < 0 || userInputInt > 1000)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 1000 !");
+            return;
+
+         }
+         else
+         {
+            totalCals += userInputInt * (fruit_7_calories_p100g / 100);
+            totalFat += userInputInt * (fruit_7_fat_p100g / 100);
+            totalChol += userInputInt * (fruit_7_cholesterol_p100g / 100);
+            totalSod += userInputInt * (fruit_7_sodium_p100g / 100);
+            totalCarbs += userInputInt * (fruit_7_carbs_p100g / 100);
+            totalPro += userInputInt * (fruit_7_protein_p100g / 100);
+            totalCalc += userInputInt * (fruit_7_calcium_p100g / 100);
+            totalPota += userInputInt * (fruit_7_potassium_p100g / 100);
+            totalSolF += userInputInt * (fruit_7_sol_fiber_p100g / 100);
+         }
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+      try{
+         System.out.println("\nHow many people to serve ?");
+         servingSizeStr = inputStream.nextLine();
+         servingSizeInt = Integer.parseInt(servingSizeStr);
+         if(servingSizeInt < 0 || servingSizeInt > 10)
+         {
+            System.err.println("\nThis is a wrong number ! "
+                  + "\nPlease entry number from 0 to 10 !");
+            return;
+
+         }
+         else
+         {
+            totalCals = totalCals / servingSizeInt;
+            totalFat = totalFat / servingSizeInt;
+            totalChol = totalChol / servingSizeInt;
+            totalSod = totalSod / servingSizeInt;
+            totalCarbs = totalCarbs / servingSizeInt;
+            totalPro = totalPro / servingSizeInt;
+            totalCalc = totalCalc / servingSizeInt;
+            totalPota = totalPota / servingSizeInt;
+            totalSolF = totalSolF / servingSizeInt;
+         }
+      }
+      catch(NumberFormatException e)
+      {
+         e.getStackTrace();
+      }
+
+      inputStream .close();
+
+      // Report result
+
+      System.out.println("\n------- Nutrition for " + recipeName +" --------" );
+      System.out.println("              ( For 1 person )");
+      System.out.println("\n       *    Calories: " + totalCals + " cals");
+      System.out.println("       *    Fat: " + totalFat + " g");
+      System.out.println("       *    Calories: " + totalChol + " mg");
+      System.out.println("       *    sodium: " + totalSod + " mg");
+      System.out.println("       *    Carbohydrates: " + totalCarbs + " g");
+      System.out.println("       *    Protein: " + totalPro + " g");
+      System.out.println("       *    Calcium: " + totalCalc + " mg");
+      System.out.println("       *    potassium: " + totalPota + " mg");
+      System.out.println("       *    Soluble Fiber: " + totalSolF + " g");
+      System.out.println("\n------- Please enjoy " + recipeName +" --------" );
+
+
+   }
+
+
+
+}
